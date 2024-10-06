@@ -1,0 +1,35 @@
+.dropdownContainer{
+    padding: 5px 1px;
+    margin: 24px 0;
+    border-bottom: 1px #E5E5E5 solid;
+}
+
+.dropdownContainer h1{
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.dropdownContainer p{
+    margin-bottom: 5px;
+}
+
+.dropdownHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdownItem{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 5px 24px;   
+}
+
+.dropdownItem input[type=checkbox] {
+    margin: 4px 0 0;
+    line-height: normal;
+    width: 20px;
+    height: 20px;
+}
