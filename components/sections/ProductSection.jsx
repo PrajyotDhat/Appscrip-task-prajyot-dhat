@@ -29,17 +29,19 @@ const ProductSection = ({ productData = [] }) => {
             case "RECOMMENDED":
                 setData(productData);
                 break;
+            case "NEWEST FIRST":
+                setData(() => sortBykey(productData, "createdAt", "desc"));
             case "POPULAR":
                 setData(() => sortBykey(productData, "rating.rate"));
-                break;
-            case "PRICE: LOW TO HIGH":
-                setData(() => sortBykey(productData, "price"));
                 break;
             case "PRICE: HIGH TO LOW":
                 setData(() => {
                     let arr = sortBykey(productData, "price");
                     return arr.toReversed();
                 });
+                break;
+            case "PRICE: LOW TO HIGH":
+                setData(() => sortBykey(productData, "price"));
                 break;
             default:
                 setData(productData);
@@ -68,6 +70,7 @@ const ProductSection = ({ productData = [] }) => {
                         onChange={handleSelectionFilter}
                     >
                         <option value="RECOMMENDED">RECOMMENDED</option>
+                        <option value="NEWEST FIRST">NEWEST FIRST</option>
                         <option value="POPULAR">POPULAR</option>
                         <option value="PRICE: LOW TO HIGH">PRICE: LOW TO HIGH</option>
                         <option value="PRICE: HIGH TO LOW">PRICE: HIGH TO LOW</option>

@@ -1,30 +1,43 @@
 import style from "@/styles/CategoryFilter.module.css"
 import FilterDropdown from "../elements/FilterDropdown";
 
-const CategoryFilter = ({setSelectedCatgory}) => {
-    
+const CategoryFilter = ({ setSelectedCatgory }) => {
+
     let filterConfig = [
         {
-            filterHeading: "CLOTHINGS",
-            category: ["men's clothing", "women's clothing", "kid's clothing"],
+            filterHeading: "IDEAL FOR",
+            category: ["All", "Men", "Women", "Baby & Kids"],
         },
         {
-            filterHeading: "JEWELERYS",
-            category: ["Rings", "Bracelets", "Ear rings"],
+            filterHeading: "OCCASION",
+            category: ["All", "Casual", "Formal", "Party", "Wedding"],
         },
         {
-            filterHeading: "ELECTRONICS",
-            category: ["Monitor", "SSD", "laptop bag"],
+            filterHeading: "WORK",
+            category: ["All", "Embroidered", "Printed", "Solid"],
         },
         {
-            filterHeading: "MOBILE",
-            category: ["Samsung", "Motorola"],
+            filterHeading: "FABRIC",
+            category: ["All", "Cotton", "Silk", "Linen", "Wool"],
         },
         {
-            filterHeading: "LAPTOPS",
-            category: ["Asus", "HP", "Dell", "Alienware", "Lenovo"],
+            filterHeading: "SEGMENT",
+            category: ["All", "Luxury", "Economy", "Premium"],
+        },
+        {
+            filterHeading: "SUITABLE FOR",
+            category: ["All", "Summer", "Winter", "All Seasons"],
+        },
+        {
+            filterHeading: "RAW MATERIALS",
+            category: ["All", "Natural", "Synthetic", "Blended"],
+        },
+        {
+            filterHeading: "PATTERN",
+            category: ["All", "Floral", "Geometric", "Abstract", "Plain"],
         },
     ];
+
 
     return (
         <div className={style.categoryFilter}>
